@@ -36,4 +36,14 @@ public class StatsService {
         }
         return minSalesMonth + 1;
     }
+
+    public int calculateSalesBelowAvg(long[] sales) {
+        int monthsBelowAvg = 0;
+        for (long sale : sales) {
+            if (sale < calculateAvgSales(sales)) {
+                monthsBelowAvg++;
+            }
+        }
+        return monthsBelowAvg;
+    }
 }
