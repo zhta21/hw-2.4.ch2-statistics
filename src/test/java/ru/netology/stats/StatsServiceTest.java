@@ -32,4 +32,13 @@ class StatsServiceTest {
         long actual = service.calculateMaxSalesMonth(sales);
         assertEquals(expected,actual);
     }
+
+    @Test
+    void shouldCalculateMinSalesMonth() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 9;
+        long actual = service.calculateMinSalesMonth(sales);
+        assertEquals(expected,actual);
+    }
 }
