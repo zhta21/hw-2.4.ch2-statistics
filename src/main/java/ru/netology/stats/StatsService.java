@@ -8,4 +8,8 @@ public class StatsService {
         }
         return sum;
     }
+
+    public long calculateAvgSales (long[] sales) {
+        return calculateSumSales(sales) / sales.length;
+    }
 }
